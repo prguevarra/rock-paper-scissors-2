@@ -37,18 +37,19 @@ function game() {
         const computerSelection = computerPlay();
         let result = playRound(playerSelection, computerSelection);
         
-        console.log(result);
-        if (result !== 'Oops! Invalid bet!') {
+        
+        if ((result !== 'Oops! Invalid bet!' && result !== 'It\'s a draw!')) {
             (result === 'You won!') ? playerScore++ : computerScore++;
         }
+        // display round result in console
+        console.log(result);
         console.log(`Player: ${playerScore}; Computer: ${computerScore}`);
     }
-
-    if (playerScore !== computerScore) {
+    // display overall game result in console
+    if (playerScore === computerScore) {
+        console.log('IT\'S A DRAW!');
+    } else {
         (playerScore > computerScore) ? console.log('YEY YOU WON THE GAME!') : 
         console.log('BETTER LUCK NEXT TIME!');
-    } else {
-        console.log('IT\'S A DRAW!');
     }
-    
 }
