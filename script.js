@@ -16,7 +16,7 @@ let computerPlay = function() {
 function playRound (playerSelection, computerSelection) {
     console.log('Player: ' + playerSelection + ' Computer:' + computerSelection);
     if (playerSelection === computerSelection) {
-        return 'It\'s a draw!';
+        return 'Draw!';
     } else if (playerSelection === 'rock') {
         return (computerSelection === 'scissors') ? 'You won!' : 'You lose!'; 
     } else if (playerSelection === 'paper') {
@@ -38,7 +38,7 @@ function game() {
         let result = playRound(playerSelection, computerSelection);
         
         
-        if ((result !== 'Oops! Invalid bet!' && result !== 'It\'s a draw!')) {
+        if ((result !== 'Oops! Invalid bet!' && result !== 'Draw!')) {
             (result === 'You won!') ? playerScore++ : computerScore++;
         }
         // display round result in console
