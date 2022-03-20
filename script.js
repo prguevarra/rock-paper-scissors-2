@@ -1,11 +1,6 @@
-const selections = document.querySelectorAll('.selection');
-
-selections.forEach((pick) => {
-    pick.addEventListener('click', (e) => {
-        console.log(e.target.getAttribute('data-name'));
-    });
-    
-});
+const selection = document.querySelectorAll('.options');
+const picksBoard = document.querySelector('#picks-container')
+const resultBoard = document.querySelector('#results-container');
 
 let computerPlay = function() {
     let randomNumber = Math.floor(Math.random()*3);
@@ -21,6 +16,18 @@ let computerPlay = function() {
             return 'invalid'
     }
 }
+
+selection.forEach((pick) => {
+    pick.addEventListener('click', playerSelect);
+});
+
+function playerSelect(e) {
+   playerSelection = e.target.getAttribute('data-name');  
+   console.log(playerSelection);
+   playRound(playerSelection, computerPlay);
+}
+
+
 
 function playRound (playerSelection, computerSelection) {
     console.log('Player: ' + playerSelection + ' Computer:' + computerSelection);
@@ -41,7 +48,6 @@ function game() {
     // playerScore = 0;
     // computerScore = 0;
     // for (let i = 0; i < 5; i ++) {
-        const playerSelection = prompt('You bet?','Rock, Paper or Scissors?').toLowerCase();
         const computerSelection = computerPlay();
         let result = playRound(playerSelection, computerSelection);
         

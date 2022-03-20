@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
+:root {
+    --champagne: #EBE0D0;
+    --hot-pink: #EC9EC0;
+    --fuchsia:  #FF0080;
+    --pink: #A91B60;
+}
+
+body {
+    background-color: #EBE0D0;
+    color: var(--pink);
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+}
+
+h1 {
+    color: var(--pink);
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
