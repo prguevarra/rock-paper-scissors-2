@@ -8,6 +8,8 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     background-color: #EBE0D0;
     color: var(--pink);
     font-family: 'Roboto Mono', monospace;
@@ -23,3 +25,46 @@ h1 {
     justify-content: center;
     gap: 15px;
 }
+
+
+button {
+  background-color: #fbeee0;
+  border: 2px solid var(--pink);
+  border-radius: 30px;
+  box-shadow: var(--pink) 2px 2px 0 0;
+  color: var(--pink);
+  width: 135px;
+  display: inline-block;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 0 20px;
+  line-height: 20px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  font-family: 'Roboto Mono', monospace;
+  margin: auto;
+  margin-top: 20px;
+  
+}
+
+button:hover {
+  background-color: var(--hot-pink);
+}
+
+button:active {
+  box-shadow: var(--pink) 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  button{
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+
+
